@@ -1,0 +1,44 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="login-form">
+	<template> 
+	  <custom-style>
+	    <style>
+	     #submit{
+	     	background-color:green;  
+	     }
+	     .update{
+	     	color:white; 
+	     }
+	     </style>
+	  </custom-style>
+	  
+	  
+	     
+	    <Vaadin-label>
+	      [[title]]
+	    </Vaadin-label>
+		<Vaadin-text-field id="name" value="{{userInput}}">
+		</Vaadin-text-field>
+		<Vaadin-text-field id="email">
+		</Vaadin-text-field>
+		<Vaadin-button id="submit">
+		submit
+		</Vaadin-button>
+        
+        <button id="helloButton" on-click="sayHello">Say hello</button>
+         
+        
+	</template>
+	<script>
+        class LoginForm extends Polymer.Element {
+            static get is() {
+                return 'login-form'
+            }
+            afterServerUpdate(){
+                console.log("The new 'text' value is: "+this.title);
+            }
+        }
+        customElements.define(LoginForm.is, LoginForm);
+    </script>
+</dom-module>
