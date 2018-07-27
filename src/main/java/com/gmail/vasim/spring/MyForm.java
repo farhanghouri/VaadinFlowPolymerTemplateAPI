@@ -33,7 +33,7 @@ public class MyForm extends PolymerTemplate<MyForm.FormModel>{
 	public MyForm() {
 		   getModel().setTitle("Login Form");
 		   
-		   getModel().setUserInput("waseem"); // not working
+		   getModel().setUserInput("waseem"); // 2 way binding not working
 		   
 		   name.setPlaceholder("name");
 		   email.setPlaceholder("email");
